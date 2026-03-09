@@ -15,7 +15,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - name: 安装依赖
-        run: npm ci
+        run: npm install
       - name: 构建项目
         run: npm run build
       - name: 部署到 GitHub Pages
