@@ -1,0 +1,5 @@
+{
+  "name": "王者荣耀英雄抽签器",
+  "description": "一个为王者荣耀玩家设计的英雄随机抽签应用，支持全英雄及分路筛选。",
+  "requestFramePermissions": []
+}
