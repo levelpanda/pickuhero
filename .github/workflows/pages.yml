@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # 监听 main 分支的推送
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -12,14 +12,14 @@ jobs:
       - name: 设置 Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # 根据你的项目要求调整版本
+          node-version: '20'
           cache: 'npm'
       - name: 安装依赖
         run: npm ci
       - name: 构建项目
-        run: npm run build  # 执行构建命令，生成静态文件
+        run: npm run build
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # 这里填你的构建输出目录，如 build 或 dist
+          publish_dir: ./dist
